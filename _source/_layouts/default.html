@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include pageStructure/head.html -%}
+<body class="{{ page.pageType }} {{ page.title | remove: " " }}">
+  {% if jekyll.environment != 'production' %}
+    {%- include pageStructure/debug.html -%}
+  {% endif %}
+    <header class="header">
+      {%- include pageStructure/navigation.html -%}
+    </header>
+    <main class="pageContent">
+      {{ content }}
+    </main>
+    {%- include pageStructure/footer.html -%}
+    <script>
+      ga('send', 'pageview', {
+        'Branch':  '{{ site.git.branch_name }}'
+      });
+    </script>
+  </body>
+</html>
