@@ -18,8 +18,3 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
-
-gems: 
-  - jekyll-git_metadata
-  
-buttonLabel: 'Master'
