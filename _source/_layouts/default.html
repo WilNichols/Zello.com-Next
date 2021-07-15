@@ -13,9 +13,7 @@
     </main>
     {%- include pageStructure/footer.html -%}
     <script>
-      gtag('send', 'pageview', {
-        'Branch':  '{{ site.git.branch_name }}'
-      });
+      console.log(branchName)
     </script>
   </body>
 </html>

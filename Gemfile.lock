@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/WilNichols/jekyll-git_metadata.git
-  revision: cebefadb5ee29bdbad926e54aa8f9c02b495b644
-  specs:
-    jekyll-git_metadata (0.3.1)
-      jekyll (~> 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,7 +62,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.2.0)
-  jekyll-git_metadata!
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
