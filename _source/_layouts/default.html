@@ -14,6 +14,16 @@
     {%- include pageStructure/footer.html -%}
     <script>
       console.log(branchName)
+    
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
     </script>
   </body>
 </html>
