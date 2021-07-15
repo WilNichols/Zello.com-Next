@@ -1,6 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
-/.nova
-/_source/.jekyll-cache
-/_source/.git-metadata
+.nova
+_source/.jekyll-cache
+_source/.git-metadata
+_site
