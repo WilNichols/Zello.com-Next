@@ -1,32 +1,27 @@
 [build]
-  command = "jekyll build"
   publish = "_site/"
   
 [context.branch-deploy.environment]
+  command = "jekyll build && cp netlify_headers _site/_headers"
   JEKYLL_ENV = "development"
 
 [context.deploy-preview.environment]
+  command = "jekyll build && cp netlify_headers _site/_headers"
   JEKYLL_ENV = "development"
 
-[context.production.environment]
-  JEKYLL_ENV = "production"
-
 [context.staging.environment]
+  command = "jekyll build && cp netlify_headers _site/_headers"
   JEKYLL_ENV = "production"
   
 [context.content.environment]
+  command = "jekyll build && cp netlify_headers _site/_headers"
+  JEKYLL_ENV = "production"
+  
+[context.production.environment]
+  command = "jekyll build"
   JEKYLL_ENV = "production"
   
 # Make sure to set production for split testing environments  
 [context.experiment.environment]
+  command = "jekyll build"
   JEKYLL_ENV = "production"
-  
-[[headers]]
-  for = "/*"
-  [headers.values]
-    [context.staging]
-      Basic-Auth = "login:password"
-    [context.content]
-      Basic-Auth = "login:password"
-    [context.develop]
-      Basic-Auth = "login:password"
