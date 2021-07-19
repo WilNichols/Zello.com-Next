@@ -1,5 +1,5 @@
 [build]
-  command = "jekyll build ${COPY_HEADERS}"
+  command = "jekyll build && cp netlify_headers _site/_headers"
   publish = "_site/"
   
 [context.branch-deploy.environment]
