@@ -1,32 +1,35 @@
 # Branch deploys – any normal previewed commit
-[context.branch-deploy.environment]
+[context.branch-deploy]
   command = "jekyll build && cp netlify_headers _site/_headers"
-  JEKYLL_ENV = "development"
+  publish = "_site/"
+  environment = { JEKYLL_ENV = "development" }
   
 # PR previews
-[context.deploy-preview.environment]
+[context.deploy-preview]
   command = "jekyll build && cp netlify_headers _site/_headers"
-  JEKYLL_ENV = "development"
+  publish = "_site/"
+  environment = { JEKYLL_ENV = "development" }
 
 # staging.www.nkls.me
-[context.staging.environment]
+[context.staging]
   command = "jekyll build && cp netlify_headers _site/_headers"
-  JEKYLL_ENV = "production"
+  publish = "_site/"
+  environment = { JEKYLL_ENV = "production" }
   
 # content.www.nkls.me
-[context.content.environment]
+[context.content]
   command = "jekyll build && cp netlify_headers _site/_headers"
-  JEKYLL_ENV = "production"
+  publish = "_site/"
+  environment = { JEKYLL_ENV = "production" }
 
 # www.nkls.me
-[context.production.environment]
+[context.production]
   command = "jekyll build"
-  JEKYLL_ENV = "production"
+  publish = "_site/"
+  environment = { JEKYLL_ENV = "production" }
   
 # Experimental conditions. Make sure to add new experimental branches here.
-[context.experiment.environment]
+[context.experiment]
   command = "jekyll build"
-  JEKYLL_ENV = "production"
-
-[build]
   publish = "_site/"
+  environment = { JEKYLL_ENV = "production" }
