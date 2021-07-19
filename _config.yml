@@ -1,3 +1,5 @@
+# Be very judicious when merging this file. Variant should always be committed, but never merged.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 cta: "https://get.zello.com/demo-zello-dispatch-hub"
 
@@ -18,3 +20,5 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+variant: 'experimental'
