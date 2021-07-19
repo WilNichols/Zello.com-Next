@@ -8,11 +8,3 @@
 [context.staging]
   environment = {JEKYLL_ENV = production}
   
-[[headers]]
-  for = "/*"
-  [context.staging]
-    Basic-Auth = "login:password"
-  [context.content]
-    Basic-Auth = "login:password"
-  [context.develop]
-    Basic-Auth = "login:password"
