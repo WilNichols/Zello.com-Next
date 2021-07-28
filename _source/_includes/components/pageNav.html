@@ -1,7 +1,21 @@
 <ul>
-  {% for item in site.menus.pageNav-en %}
-    <li class="menu-item-{{ loop.index }}">
-      <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-    </li>
-  {% endfor %}
+  {% if page.lang == 'es' %}
+    {% for item in site.menus.pageNav-es %}
+      <li class="menu-item-{{ loop.index }}">
+        <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  {% elsif page.lang == 'fr' %}
+    {% for item in site.menus.pageNav-fr %}
+      <li class="menu-item-{{ loop.index }}">
+        <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  {% else %}
+    {% for item in site.menus.pageNav-en %}
+      <li class="menu-item-{{ loop.index }}">
+        <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
 </ul>

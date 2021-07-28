@@ -1,5 +1,5 @@
 ---
-layout: es/default
+layout: default
 title: Página 2
 menus: pageNav-es
 collections:

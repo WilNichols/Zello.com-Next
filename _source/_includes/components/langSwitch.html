@@ -1,9 +1,10 @@
 
 {% assign pages = site.pages | where: "lang-ref", page.lang-ref %}
-  <footer class="lang-options">
-      {% for page in pages %}
+<footer class="lang-options">
+  <ul>
+    {% for page in pages %}
       <li><a href="{{ page.url }}" class="{{ page.lang }}"{{post.lang}}">{{ page.title }}: {{ page.lang }}</a></li>
-      {% endfor %}
-      </ul>
-  </footer>
+    {% endfor %}
+  </ul>
+</footer>
   

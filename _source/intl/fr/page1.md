@@ -1,5 +1,5 @@
 ---
-layout: fr/default
+layout: default
 title: Page 1
 menus: pageNav-fr
 collections:
